@@ -1,6 +1,6 @@
 // Paste your Formspree endpoint here, for example:
 // const FORMSPREE_ENDPOINT = "https://formspree.io/f/abcxyz";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xqeoegzo";
 
 const resourceList = document.querySelector("#resource-list");
 const contactForm = document.querySelector("[data-formspree-form]");
