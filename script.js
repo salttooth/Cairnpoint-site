@@ -1,4 +1,10 @@
+// Paste your Formspree endpoint here, for example:
+// const FORMSPREE_ENDPOINT = "https://formspree.io/f/abcxyz";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
 const resourceList = document.querySelector("#resource-list");
+const contactForm = document.querySelector("[data-formspree-form]");
+const formStatus = document.querySelector("#form-status");
 const year = document.querySelector("#year");
 
 if (year) {
@@ -73,10 +79,37 @@ async function loadResources() {
 
 loadResources();
 
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", (user) => {
-    if (!user && window.location.hash.includes("invite_token")) {
-      window.netlifyIdentity.open("signup");
+if (contactForm) {
+  contactForm.setAttribute("action", FORMSPREE_ENDPOINT);
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
+      if (formStatus) {
+        formStatus.textContent = "Add your Formspree endpoint in script.js before using the form.";
+      }
+      return;
+    }
+
+    const submitButton = contactForm.querySelector("button[type='submit']");
+    if (submitButton) submitButton.disabled = true;
+    if (formStatus) formStatus.textContent = "Sending your request...";
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error("Formspree submission failed");
+      window.location.href = "thank-you.html";
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = "The form could not be sent. Please try again.";
+      }
+      if (submitButton) submitButton.disabled = false;
     }
   });
 }
