@@ -18,4 +18,10 @@
   <url>
     <loc>https://YOUR-DOMAIN.example/policy-workflow-development.html</loc>
   </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.example/resources.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.example/resources/media-accessibility-decision-making.html</loc>
+  </url>
 </urlset>

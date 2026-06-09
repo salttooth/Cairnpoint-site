@@ -12,6 +12,7 @@ if (year) {
 }
 
 function normalizeResourceType(type) {
+  const key = String(type || "").toLowerCase();
   const labels = {
     whitepaper: "Whitepaper",
     guide: "Guide",
@@ -19,7 +20,7 @@ function normalizeResourceType(type) {
     link: "Resource",
   };
 
-  return labels[type] || "Resource";
+  return labels[key] || type || "Resource";
 }
 
 function escapeHtml(value) {

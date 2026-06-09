@@ -14,18 +14,31 @@ Then open `http://127.0.0.1:4173`.
 
 ## Resource Updates
 
-Resources are stored in `data/resources.json`.
+Resources are authored as Markdown files in `content/resources`.
 
-Uploaded whitepapers and documents belong in `assets/docs`.
+Each resource needs frontmatter:
 
-Each resource supports:
+```md
+---
+title: "Practical Guide to Media Accessibility Decision-Making"
+type: "Guide"
+description: "Captions, audio description, prioritization, budget considerations, and risk management."
+date: "2026-06-08"
+slug: "media-accessibility-decision-making"
+---
 
-- `title`
-- `type`: `whitepaper`, `guide`, `video`, or `link`
-- `description`
-- `file`: optional uploaded document path
-- `url`: optional external link
-- `embed`: optional video embed URL
+# Practical Guide to Media Accessibility Decision-Making
+
+Article text goes here.
+```
+
+Run the build to generate `resources.html`, article detail pages in `resources/`, and `data/resources.json`:
+
+```sh
+node build-resources.mjs
+```
+
+Vercel is configured to run this automatically during deploy.
 
 ## Formspree Setup
 
