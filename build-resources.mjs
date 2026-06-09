@@ -70,9 +70,7 @@ function markdownToHtml(markdown) {
     .join("\n");
 }
 
-function siteHeader(current = "") {
-  const isCurrent = (page) => (current === page ? ' aria-current="page"' : "");
-
+function siteHeader() {
   return `
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" aria-label="Site header">
@@ -81,11 +79,9 @@ function siteHeader(current = "") {
         <span>CairnPoint Consulting</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="../accessibility-strategy.html">Strategy</a>
-        <a href="../media-accessibility.html">Media</a>
-        <a href="../audio-description.html">Audio Description</a>
-        <a href="../accessibility-training.html">Training</a>
-        <a href="../resources.html"${isCurrent("resources")}>Resources</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#credibility">Experience</a>
+        <a href="../index.html#resources">Resources</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
     </header>`;
@@ -118,7 +114,7 @@ function articlePage(resource, html) {
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    ${siteHeader("resources")}
+    ${siteHeader()}
     <main id="main">
       <article class="article-page">
         <p class="eyebrow">${escapeHtml(resource.type)}</p>
@@ -169,11 +165,9 @@ function resourcesIndex(resources) {
         <span>CairnPoint Consulting</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="accessibility-strategy.html">Strategy</a>
-        <a href="media-accessibility.html">Media</a>
-        <a href="audio-description.html">Audio Description</a>
-        <a href="accessibility-training.html">Training</a>
-        <a href="resources.html" aria-current="page">Resources</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#credibility">Experience</a>
+        <a href="index.html#resources">Resources</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </header>

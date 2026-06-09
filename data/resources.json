@@ -1,6 +1,14 @@
 {
   "resources": [
     {
+      "title": "Media Accessibility Principles for Complex Institutions",
+      "type": "White Paper",
+      "description": "Foundational principles for universities, health systems, research organizations, and nonprofits building sustainable media accessibility programs.",
+      "date": "2026-06-08",
+      "slug": "media-accessibility-principles-for-complex-institutions",
+      "url": "resources/media-accessibility-principles-for-complex-institutions.html"
+    },
+    {
       "title": "Practical Guide to Media Accessibility Decision-Making",
       "type": "Guide",
       "description": "Captions, audio description, prioritization, budget considerations, and risk management.",

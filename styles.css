@@ -19,7 +19,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -167,6 +167,14 @@ h3 {
 .site-nav a[aria-current="page"] {
   color: var(--teal);
   text-decoration-thickness: 0.16em;
+}
+
+#top,
+#services,
+#credibility,
+#resources,
+#contact {
+  scroll-margin-top: 88px;
 }
 
 .hero {
@@ -631,6 +639,14 @@ button:disabled {
   h2,
   .contact h2 {
     max-width: 100%;
+  }
+
+  #top,
+  #services,
+  #credibility,
+  #resources,
+  #contact {
+    scroll-margin-top: 150px;
   }
 }
 

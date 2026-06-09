@@ -80,6 +80,53 @@ async function loadResources() {
 
 loadResources();
 
+function easeInOutCubic(progress) {
+  return progress < 0.5
+    ? 4 * progress * progress * progress
+    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+}
+
+function scrollToTarget(target) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const header = document.querySelector(".site-header");
+  const headerOffset = (header?.offsetHeight || 0) + 16;
+  const start = window.scrollY;
+  const end = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  const distance = end - start;
+  const duration = 650;
+  let startTime = null;
+
+  if (reducedMotion) {
+    window.scrollTo(0, end);
+    return;
+  }
+
+  function animateScroll(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    window.scrollTo(0, start + distance * easeInOutCubic(progress));
+
+    if (progress < 1) {
+      window.requestAnimationFrame(animateScroll);
+    }
+  }
+
+  window.requestAnimationFrame(animateScroll);
+}
+
+document.querySelectorAll(".site-nav a[href^='#']").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.hash);
+    if (!target) return;
+
+    event.preventDefault();
+    history.pushState(null, "", link.hash);
+    scrollToTarget(target);
+  });
+});
+
 if (contactForm) {
   contactForm.setAttribute("action", FORMSPREE_ENDPOINT);
 
