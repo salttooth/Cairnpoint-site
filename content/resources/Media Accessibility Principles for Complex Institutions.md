@@ -1,3 +1,11 @@
+---
+title: "Media Accessibility Principles for Complex Institutions"
+description: "Foundational principles for universities, health systems, research organizations, and nonprofits building sustainable media accessibility programs."
+type: "White Paper"
+date: "2026-06-08"
+slug: "media-accessibility-principles-for-complex-institutions"
+---
+
 # Media Accessibility Principles for Complex Institutions
 
 ## What universities, health systems, and nonprofits need to understand before they build a program
