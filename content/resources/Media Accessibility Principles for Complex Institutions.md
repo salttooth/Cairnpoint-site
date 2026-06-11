@@ -144,4 +144,4 @@ Media accessibility is not a project with an end date. It's an ongoing operation
 
 ---
 
-*CairnPoint Consulting helps higher education, healthcare, research, and nonprofit organizations navigate media accessibility decisions — from prioritizing backlog work to building production workflows and accessibility programs that last. [Request a consultation](#contact) to talk through where your organization is and what would help most.*
+*CairnWise Consulting helps higher education, healthcare, research, and nonprofit organizations navigate media accessibility decisions — from prioritizing backlog work to building production workflows and accessibility programs that last. [Request a consultation](#contact) to talk through where your organization is and what would help most.*

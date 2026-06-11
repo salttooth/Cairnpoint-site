@@ -74,9 +74,9 @@ function siteHeader() {
   return `
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" aria-label="Site header">
-      <a class="brand" href="../index.html" aria-label="CairnPoint Consulting home">
-        <img class="brand-mark" src="../assets/images/cairnpoint-mark.svg" alt="" aria-hidden="true">
-        <span>CairnPoint Consulting</span>
+      <a class="brand" href="../index.html" aria-label="CairnWise Consulting home">
+        <img class="brand-mark" src="../assets/images/cairnwise-mark.svg" alt="" aria-hidden="true">
+        <span>CairnWise Consulting</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="../index.html#services">Services</a>
@@ -90,14 +90,14 @@ function siteHeader() {
 function siteFooter() {
   return `
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> CairnPoint Consulting. Accessibility strategy and media accessibility consulting by Kyle Van Auker.</p>
+      <p>&copy; <span id="year"></span> CairnWise Consulting. Accessibility strategy and media accessibility consulting by Kyle Van Auker.</p>
       <a href="../index.html">Home</a>
     </footer>
     <script src="../script.js"></script>`;
 }
 
 function articlePage(resource, html) {
-  const title = escapeHtml(`${resource.title} | CairnPoint Consulting`);
+  const title = escapeHtml(`${resource.title} | CairnWise Consulting`);
   const description = escapeHtml(resource.description);
 
   return `<!doctype html>
@@ -149,9 +149,9 @@ function resourcesIndex(resources) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resources | CairnPoint Consulting</title>
+    <title>Resources | CairnWise Consulting</title>
     <meta name="description" content="Guides, articles, and resources for practical accessibility decision-making, media accessibility, and audio description strategy.">
-    <meta property="og:title" content="Resources | CairnPoint Consulting">
+    <meta property="og:title" content="Resources | CairnWise Consulting">
     <meta property="og:description" content="Guides, articles, and resources for practical accessibility decision-making.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://YOUR-DOMAIN.example/resources.html">
@@ -160,9 +160,9 @@ function resourcesIndex(resources) {
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" aria-label="Site header">
-      <a class="brand" href="index.html" aria-label="CairnPoint Consulting home">
-        <img class="brand-mark" src="assets/images/cairnpoint-mark.svg" alt="" aria-hidden="true">
-        <span>CairnPoint Consulting</span>
+      <a class="brand" href="index.html" aria-label="CairnWise Consulting home">
+        <img class="brand-mark" src="assets/images/cairnwise-mark.svg" alt="" aria-hidden="true">
+        <span>CairnWise Consulting</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html#services">Services</a>
@@ -188,7 +188,7 @@ function resourcesIndex(resources) {
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> CairnPoint Consulting. Accessibility strategy and media accessibility consulting by Kyle Van Auker.</p>
+      <p>&copy; <span id="year"></span> CairnWise Consulting. Accessibility strategy and media accessibility consulting by Kyle Van Auker.</p>
       <a href="index.html">Home</a>
     </footer>
     <script src="script.js"></script>

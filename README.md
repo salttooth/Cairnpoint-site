@@ -1,6 +1,6 @@
 # Accessibility Strategy Consulting Site
 
-Simple static website for CairnPoint Consulting, Kyle Van Auker's accessibility strategy and media accessibility consulting practice.
+Simple static website for CairnWise Consulting, Kyle Van Auker's accessibility strategy and media accessibility consulting practice.
 
 ## Local Preview
 
@@ -54,7 +54,7 @@ The form redirects to `thank-you.html` after a successful submission.
 
 ## SEO Placeholders
 
-Replace `https://YOUR-DOMAIN.example/` with the live CairnPoint domain in:
+Replace `https://YOUR-DOMAIN.example/` with the live CairnWise domain in:
 
 - `index.html`
 - each service page
