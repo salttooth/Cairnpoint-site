@@ -36,6 +36,7 @@ function renderResources(resources) {
   if (!resourceList) return;
 
   if (!resources.length) {
+    if (resourceList.querySelector(".resource-card")) return;
     resourceList.innerHTML = "<p class=\"muted\">Resources will be added soon.</p>";
     return;
   }
@@ -74,6 +75,7 @@ async function loadResources() {
     const resources = Array.isArray(data) ? data : data.resources;
     renderResources(Array.isArray(resources) ? resources : []);
   } catch (error) {
+    if (resourceList.querySelector(".resource-card")) return;
     resourceList.innerHTML = "<p class=\"muted\">Resources will be added soon.</p>";
   }
 }
