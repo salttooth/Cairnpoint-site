@@ -112,6 +112,12 @@ function articlePage(resource, html) {
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://YOUR-DOMAIN.example/resources/${escapeHtml(resource.slug)}.html">
     <link rel="stylesheet" href="../styles.css">
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     ${siteHeader()}
@@ -156,6 +162,12 @@ function resourcesIndex(resources) {
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://YOUR-DOMAIN.example/resources.html">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
