@@ -1,14 +1,6 @@
 {
   "resources": [
     {
-      "title": "UCSF Audio Description for Video Content",
-      "type": "Guide",
-      "description": "A plain-language guide to audio description requirements, archive/backlog decisions, and workflow considerations for video content.",
-      "date": "2026-06-09",
-      "slug": "ucsf-audio-description-for-video-content",
-      "url": "resources/ucsf-audio-description-for-video-content.html"
-    },
-    {
       "title": "Media Accessibility Principles for Complex Institutions",
       "type": "White Paper",
       "description": "Foundational principles for universities, health systems, research organizations, and nonprofits building sustainable media accessibility programs.",
